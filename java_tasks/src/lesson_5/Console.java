@@ -1,6 +1,6 @@
 package lesson_5;
 
-class console {
+class Console {
     /*
     Создать класс компьютер.
 Поля:
@@ -18,6 +18,6 @@ class console {
 - при превышении лимита ресурса комп сгорает
      */
     public static void main(String[] args) {
-        comp.Console();
+        Compile.Cons();
     }
 }

@@ -13,8 +13,8 @@ public class task_5 {
         int Mas2[] = new int[5];
         System.out.print("первый массив: ");
         for (int i = 0; i < 5; i++) {
-            Mas[i] = (int) (Math.random() * 15);
-            Mas2[i] = (int) (Math.random() * 15);
+            Mas[i] = (int) (Math.random() * 16);
+            Mas2[i] = (int) (Math.random() * 16);
             System.out.print(Mas[i] + " ");
         }
         System.out.print('\n' + "второй массив: ");

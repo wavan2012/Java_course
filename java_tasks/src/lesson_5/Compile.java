@@ -2,14 +2,14 @@ package lesson_5;
 
 import java.util.Scanner;
 
-public class comp {
+public class Compile {
     public static String processor;
     public static String operative;
     public static String hard;
     public static int cycles;
     public static int active = 0;
 
-    public static void Console() {
+    public static void Cons() {
         int i = 0;
         while (i == 0) {
             System.out.print("Напишите команду: ");
