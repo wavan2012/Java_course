@@ -14,12 +14,14 @@ public class Compile {
         Light.light_character();
         Light.light(40);
 
+        Freight maz500 = new Freight();
+        maz500.mark = "maz";
+        maz500.mass = 6500;
+        maz500.horse_power = 150;
+        maz500.max_speed = 120;
+        maz500.number_of_wheels = 6;
+        maz500.fuel_consumption = 25;
+        maz500.lifting_capacity = 7500;
 
-
-                /*
-                body_type, mass,
-        horse_power, super.power_w(horse_power), max_speed,
-        fuel_consumption, number_of_passengers, number_of_wheels
-                 */
     }
 }
