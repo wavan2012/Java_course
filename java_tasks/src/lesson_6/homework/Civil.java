@@ -6,10 +6,11 @@ public final class Civil extends Air {
 
     public void civilCharacter() {
         System.out.printf("""
+                                                
                         Марка самолета: %s
                         Масса: %s кг
                         Количество пассажиров: %s кг
-                        Наличие бизнес класса %s
+                        Наличие бизнес класса: %s
                         Мощность: %s л.с.
                         Мощность: %s кВатт
                         Максимальная скорость: %s км/ч

@@ -5,6 +5,7 @@ public final class Freight extends Land {
 
     public void freightCharacter() {
         System.out.printf("""
+                                                
                         Марка автомобиля: %s
                         Масса: %s кг
                         Грузоподъемность: %s кг

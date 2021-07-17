@@ -17,6 +17,7 @@ public final class Light extends Land {
                         Расход топлива: %s л/100км
                         Колличество пассажиров: %d
                         Колличество колёс: %d
+                                                
                         """, mark, body_type, mass,
                 horsePower, powerW(horsePower), maxSpeed,
                 fuelConsumption, number_of_passengers, numberOfWheels);
@@ -30,7 +31,6 @@ public final class Light extends Land {
                         За время %s ч, автомобиль %s
                         двигаясь с максимальной скоростью %s км/ч
                         проедет %s км и израсходует %s литров топлива.
-                                                
                         """,
                 time_of_work, mark, maxSpeed, distance, fuel_consume(distance));
     }

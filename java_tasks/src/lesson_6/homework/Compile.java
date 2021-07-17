@@ -5,6 +5,7 @@ public class Compile {
         Light vaz2101 = new Light();
         Freight maz500 = new Freight();
         Civil tu154 = new Civil();
+        Military su57 = new Military();
 
         vaz2101.mark = "Vaz-2101";
         vaz2101.body_type = "sedan";
@@ -14,7 +15,6 @@ public class Compile {
         vaz2101.fuelConsumption = 9;
         vaz2101.number_of_passengers = 8;// it's joke
         vaz2101.numberOfWheels = 4;
-
 
         maz500.mark = "maz-500";
         maz500.mass = 6500;
@@ -33,11 +33,23 @@ public class Compile {
         tu154.minimumRunwayLength = 2500;
         tu154.wingspan = 37.55;
 
+        su57.mark = "su-57";
+        su57.mass = 30610;
+        su57.catapultSystem = true;
+        su57.numberOfRockets = 8;
+        su57.horsePower = 2 * 9500 / 75;
+        su57.maxSpeed = 2450;
+        su57.minimumRunwayLength = 500;
+        su57.wingspan = 14;
+
         vaz2101.lightCharacter();
         vaz2101.light(40);
         maz500.freightCharacter();
         maz500.freight(5500);
         tu154.civilCharacter();
         tu154.civil(180);
+        su57.militaryCharacter();
+        su57.military();
+        su57.catapult();
     }
 }
