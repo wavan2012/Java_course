@@ -1,18 +1,28 @@
 package lesson_6.homework;
 
 public final class Freight extends Land {
-    public static int lifting_capacity;
+    public int liftingCapacity;
 
-    public static void freight_character() {
-        System.out.printf("\nМарка автомобиля: %s" + '\n' +
-                        "Масса: %s кг" + '\n' +
-                        "Грузоподъемность: %s кг" + '\n' +
-                        "Мощность: %s л.с." + '\n' +
-                        "Мощность: %s кВатт" + '\n' +
-                        "Максимальная скорость: %s км/ч" + '\n' +
-                        "Расход топлива: %s л/100км" + '\n' +
-                        "Колличество колёс: %d" + '\n', mark, mass,
-                lifting_capacity, horse_power, power_w(horse_power),
-                max_speed, fuel_consumption, number_of_wheels);
+    public void freightCharacter() {
+        System.out.printf("""
+                        Марка автомобиля: %s
+                        Масса: %s кг
+                        Грузоподъемность: %s кг
+                        Мощность: %s л.с.
+                        Мощность: %s кВатт
+                        Максимальная скорость: %s км/ч
+                        Расход топлива: %s л/100км
+                        Колличество колёс: %d
+                                                
+                        """, mark, mass,
+                liftingCapacity, horsePower, powerW(horsePower),
+                maxSpeed, fuelConsumption, numberOfWheels);
+    }
+
+    public void freight(double cargo) {
+        if (cargo < liftingCapacity)
+            System.out.println("Грузовик загружен");
+        else
+            System.out.println("Вам нужен грузовик побольше");
     }
 }
