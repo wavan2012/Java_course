@@ -1,8 +1,8 @@
 package lesson_6.homework;
 
 public final class Light extends Land {
-    public String body_type;
-    public int number_of_passengers;
+    public String bodyType;
+    public int numberOfPassengers;
 
 
     public void lightCharacter() {
@@ -18,24 +18,24 @@ public final class Light extends Land {
                         Колличество пассажиров: %d
                         Колличество колёс: %d
                                                 
-                        """, mark, body_type, mass,
+                        """, mark, bodyType, mass,
                 horsePower, powerW(horsePower), maxSpeed,
-                fuelConsumption, number_of_passengers, numberOfWheels);
+                fuelConsumption, numberOfPassengers, numberOfWheels);
         System.out.println();
     }
 
 
-    public void light(int time_of_work) {
-        double distance = time_of_work * maxSpeed;
+    public void light(int timeOfWork) {
+        double distance = timeOfWork * maxSpeed;
         System.out.printf("""
                         За время %s ч, автомобиль %s
                         двигаясь с максимальной скоростью %s км/ч
                         проедет %s км и израсходует %s литров топлива.
                         """,
-                time_of_work, mark, maxSpeed, distance, fuel_consume(distance));
+                timeOfWork, mark, maxSpeed, distance, fuelConsume(distance));
     }
 
-    private double fuel_consume(double distance) {
+    private double fuelConsume(double distance) {
         return distance * fuelConsumption / 100;
     }
 }

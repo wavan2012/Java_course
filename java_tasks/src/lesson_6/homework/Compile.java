@@ -8,12 +8,12 @@ public class Compile {
         Military su57 = new Military();
 
         vaz2101.mark = "Vaz-2101";
-        vaz2101.body_type = "sedan";
+        vaz2101.bodyType = "sedan";
         vaz2101.mass = 955;
         vaz2101.horsePower = 64;
         vaz2101.maxSpeed = 120;
         vaz2101.fuelConsumption = 9;
-        vaz2101.number_of_passengers = 8;// it's joke
+        vaz2101.numberOfPassengers = 8;// it's joke
         vaz2101.numberOfWheels = 4;
 
         maz500.mark = "maz-500";
