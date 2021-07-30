@@ -25,5 +25,7 @@ public class Run {
         coin.addProduct(buns);
         coin.addProduct(garlic);
         coin.allProducts();
+        coin.allProducts('+');
+        coin.allProducts('-');
     }
 }

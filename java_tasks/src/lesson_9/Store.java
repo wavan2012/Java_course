@@ -1,14 +1,55 @@
 package lesson_9;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 public class Store {
-    Map<Integer, Product> listOfProducts = new HashMap();
+    HashMap<Integer, Product> listOfProducts = new LinkedHashMap<>();
+
+    void allProducts() {
+        System.out.println();
+        for (Map.Entry<Integer, Product> entry : listOfProducts.entrySet()) {
+            System.out.print("id " + listOfProducts.get(entry.getKey()).id +
+                    " || name " + listOfProducts.get(entry.getKey()).name +
+                    " || price " + listOfProducts.get(entry.getKey()).price + "\n");
+        }
+
+    }
+
+    void allProducts(char sorting) {
+        if (sorting == '+') {
+            TreeSet<Product> computeThis = new TreeSet<Product>(new Comparator<Product>() {
+                @Override
+                public int compare(Product o2, Product o1) {
+                    return o2.price - o1.price;
+                }
+            });
+            computeThis.addAll(listOfProducts.values());
+            System.out.println();
+            for (Product product : computeThis) {
+                System.out.print("id " + product.id +
+                        " || name " + product.name +
+                        " || price " + product.price + "\n");
+            }
+        }
+
+        if (sorting == '-') {
+            TreeSet<Product> computeThis = new TreeSet<Product>(new Comparator<Product>() {
+                @Override
+                public int compare(Product o2, Product o1) {
+                    return o1.price - o2.price;
+                }
+            });
+            computeThis.addAll(listOfProducts.values());
+            System.out.println();
+            for (Product product : computeThis) {
+                System.out.print("id " + product.id +
+                        " || name " + product.name +
+                        " || price " + product.price + "\n");
+            }
+        }
+    }
 
     void addProduct(Product prod) {
-        listOfProducts.keySet();
         if (!listOfProducts.containsKey(prod.id)) listOfProducts.put(prod.id, prod);
     }
 
@@ -27,13 +68,6 @@ public class Store {
         if (!listOfProducts.containsKey(id)) listOfProducts.put(id, new Product(id, name, price));
     }
 
-    void allProducts() {
-        listOfProducts.keySet();
-        for (Map.Entry<Integer, Product> entry : listOfProducts.entrySet()) {
-            System.out.print("id " + listOfProducts.get(entry.getKey()).id +
-                    " || name " + listOfProducts.get(entry.getKey()).name +
-                    " || price " + listOfProducts.get(entry.getKey()).price + "\n");
-        }
+    void removeProduct() {
     }
-
 }
